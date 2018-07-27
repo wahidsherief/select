@@ -20,7 +20,7 @@ a, a:hover {
 }
 
 .cta-btn {
-	margin-top: 15px
+    margin-top: 50px;
 }
 
 .nav-area {
@@ -118,12 +118,13 @@ a:hover{
 
 .fb-user-thumb {
     float: left;
-    width: 70px;
-    padding: 15px;
+    padding: 15px 5px 15px 10px;
+    /*background: lime;*/
 }
 
 .fb-user-thumb img {
     width: 100%;
+    border: 1px solid #ddd;
     border-radius: 50%;
     -webkit-border-radius: 50%;
 }
@@ -137,7 +138,7 @@ a:hover{
 
 .fb-user-details {
 	font-size: 12px;
-	padding: 0px 20px 0px 20px;
+	padding: 0px 20px 0px 0px;
 }
 
 
@@ -308,4 +309,45 @@ a:hover{
 .menu-divider {
 	margin: 0;
 	border-color: #ccc;
+}
+
+.panel-container {
+    overflow-y: hidden;
+    height: 745px;
+}
+
+.panel {
+    border-top: 1px solid #ddd;
+}
+
+.desktop-view {
+    margin-bottom: 50px;
+}
+
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #555;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.panel-x {
+    height: 300px;
+    /*background: red;*/
+    content:'';
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(251, 251, 251, 0) 100%);
+    position: absolute;
+    z-index: 1000;
+}
+
+
+.panel-wrap {
+    z-index: -1000;
 }
