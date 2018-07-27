@@ -318,6 +318,8 @@ a:hover{
 
 .panel {
     border-top: 1px solid #ddd;
+    /*display: none;*/
+    /*margin-top: 80px;*/
 }
 
 .desktop-view {
@@ -350,4 +352,5 @@ footer {
 
 .panel-wrap {
     z-index: -1000;
+    /*display: none;*/
 }
