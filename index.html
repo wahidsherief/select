@@ -118,7 +118,7 @@
             <!-- Sidebar Widgets Column -->
             <div class="col-md-4 panel-container">
 
-                <div class="panel-x"></div>
+                <div class="panel-top-shadow"></div>
                 <div class="panel-wrap">
 	                <div class="panel" id='slider_1'>
 	                    <div class="panel-body">
@@ -314,49 +314,26 @@
                 $("body > :not(:has(#side-collapse))").toggleClass('do-fade');
             });
 
-			// function moveItems(el) {
-			//   var x = 1;
-			//   var flag = 0;
-			//   var elems = $(el).nextAll();
-			//   count = elems.length;
-			//   elems.each (function (i) {
-			//     setTimeout(function() {
-			//       if (x>1) { 
-			//         y = x-1;
-			//         $('#slider_'+y).show().delay(2000).slideUp().fadeOut();
-			//       }							
-			//       $('#slider_'+x).show().delay(2000).slideUp();
-			//       x++;
-			//       if (!--count) {
-			//         setTimeout(function() {
-			//         moveItems('.panel');
-			//         }, 6000)
-			//       }
-			//     }, i*2000);
-			//   })
-			// }
-
-			// moveItems('.panel');
-
 			function moveItems(el) {
 			  var elems = document.querySelectorAll(el);
-			  Array.from(elems).forEach((item,index) => {
+			  Array.from(elems).forEach((item, index) => {
 			    setTimeout(function() {
-			     index+=1;
-			     $('#slider_'+index).show().delay(4000).slideUp().fadeOut();
-			     if (index == elems.length) {
-			       setTimeout(function() {
-					   for(j=1;j<= elems.length;j++){ $('#slider_'+j).show()}
-			           moveItems('.panel');
-			        }, 4000)
+			      index += 1;
+			      $('#slider_' + index).show().delay(4000).slideUp().fadeOut('fast');
+			      if (index == elems.length) {
+			        setTimeout(function() {
+			          for (j = 1; j <= elems.length; j++) {
+			            $('#slider_' + j).show();
+			          }
+			          moveItems('.panel');
+			        }, 6000)
 			      }
-			      
-			    }, index*4000);
-			})
+
+			    }, index * 4000);
+			  })
 			}
 
-			moveItems('.panel');
-
+			window.addEventListener("load", moveItems('.panel'));
 
         });
     </script>
