@@ -33,12 +33,12 @@
           <i class="fa fa-bars"></i>
 
         </button>
-          <!-- <ul class="navbar-nav ml-auto nav-area side-collapse in"> -->
-            <!-- <li class="nav-item dropdown side-collapse in"> -->
+          <!-- <ul class="navbar-nav ml-auto nav-area menu in"> -->
+            <!-- <li class="nav-item dropdown menu in"> -->
         <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
         </a> -->
-        <div id="side-collapse" class="in dropdown-menu menu" aria-labelledby="navbarDropdown">
+        <div id="menu" class="in dropdown-menu menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">Privacy Policy</a>
             <div class="dropdown-divider menu-divider"></div>
             <a class="dropdown-item" href="#">Product Hunt Page</a>
@@ -117,8 +117,7 @@
 
             <!-- Sidebar Widgets Column -->
             <div class="col-md-4 panel-container">
-
-                <div class="panel-top-shadow"></div>
+                <div class="panel-bottom-shadow"></div>
                 <div class="panel-wrap">
 	                <div class="panel" id='slider_1'>
 	                    <div class="panel-body">
@@ -304,14 +303,14 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $('#nav-click').on('click', function (e) {
-                $('#side-collapse').fadeToggle();
-                $("body > :not(:has(#side-collapse))").toggleClass('do-fade');
+                $('#menu').fadeToggle().attr("val", 1);
+                $("body > :not(:has(#menu))").toggleClass('do-fade');
                 e.stopPropagation(); 
             });
 
             $('html').click(function(e) {
-                $('#side-collapse').fadeOut(); 
-                $("body > :not(:has(#side-collapse))").toggleClass('do-fade');
+                $('#menu').fadeOut(); 
+                $("body > :not(:has(#menu))").toggleClass('do-fade');
             });
 
 
