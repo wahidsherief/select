@@ -6,6 +6,10 @@ a, a:hover {
 	color: black;
 }
 
+.container {
+     /*height: 100vh;*/
+}
+
 .logo-container {
 	margin: 0 auto;
 }
@@ -196,7 +200,7 @@ a:hover{
 
 .panel-container {
     overflow-y: hidden;
-    height: 745px;
+    height: 100vh;
 }
 
 .desktop-view {
@@ -231,4 +235,12 @@ footer {
     z-index: -1000;
     width: 375px;
     padding: 0px 10px;
+}
+
+.lg-screen-footer {
+    margin-top: 100px;
+}
+
+.sm-screen-footer {
+    margin-top: 50px;
 }
