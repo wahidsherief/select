@@ -241,6 +241,7 @@ footer {
 .lg-screen-footer {
     position: relative;
     top: 120px;
+    padding: 20px;
 }
 
 .sm-screen-footer {
