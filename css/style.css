@@ -1,5 +1,6 @@
 body {
 	padding-top: 20px !important;
+    overflow-y: hidden;
 }
 
 a, a:hover {
@@ -238,9 +239,16 @@ footer {
 }
 
 .lg-screen-footer {
-    margin-top: 100px;
+    position: relative;
+    top: 120px;
 }
 
 .sm-screen-footer {
     margin-top: 50px;
+}
+
+@media screen and (max-width: 990px) {
+   body {
+       overflow-y: scroll;
+   }
 }
